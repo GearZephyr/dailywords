@@ -125,22 +125,23 @@ function App() {
                 <div className="mx-auto max-w-2xl overflow-hidden rounded-xl border border-neutral-200">
 
                   {groupedEntries[date].map((item, i) => (
-                    <div
-                      key={i}
-                      className={`grid grid-cols-[160px_1fr] gap-6 px-6 py-5
-                        ${i % 2 === 0 ? "bg-white" : "bg-neutral-50"}
-                      `}
-                    >
-                      {/* KEY */}
-                      <div className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
-                        {item.key}
-                      </div>
+                 <div
+  key={i}
+  className={`grid grid-cols-[160px_1fr] gap-6 px-6 py-5 items-center
+    ${i % 2 === 0 ? "bg-white" : "bg-neutral-50"}
+  `}
+>
+  {/* KEY */}
+  <div className="text-xs font-semibold uppercase tracking-widest text-neutral-500 text-center">
+    {item.key}
+  </div>
 
-                      {/* VALUE */}
-                      <p className="text-sm leading-7 text-neutral-700">
-                        {item.value}
-                      </p>
-                    </div>
+  {/* VALUE */}
+  <p className="text-sm leading-7 text-neutral-700 text-center">
+    {item.value}
+  </p>
+</div>
+
                   ))}
 
                 </div>
